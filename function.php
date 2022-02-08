@@ -58,22 +58,24 @@ Créez une fonction
   avec une couleur ... : HTML style=color:red;
   différente sur le texte suivant l’âge de l’utilisateur.
 */
+
+$colors=[
+    "red",
+    "green",
+    "grey",
+    "black",
+    "purple",
+    "yellow",
+    "pink",
+    "blue",
+    "orange",
+    "brown",
+    "black",
+    "black",
+    "pink"];
 function affiche_age ( $age) {
     $color="red"; 
-    $colors=[
-        "red",
-        "green",
-        "grey",
-        "black",
-        "purple",
-        "yellow",
-        "pink",
-        "blue",
-        "orange",
-        "brown",
-        "black",
-        "black",
-        "pink"];
+    global $colors;
     // En code on aime pas répété on fait des boucles...
     $agemin=0;
     $agemax=10;
@@ -85,6 +87,26 @@ function affiche_age ( $age) {
     global $utilisateur;
     echo "<div style=color:".$color.";>".$age."</div><br />";
 }
+
+/*
 for ($i=1; $i < 13; $i++){
     affiche_age($age=$i*10);
 }
+*/
+//Créez une fonction titre prenant en argument
+//  le titre,  du titre et la couleur du titre.
+function affiche_titre($titre,$couleur,$taille){
+    echo "<div style=color:".$couleur.";><h".$taille.">".$titre." </h".$taille."> </div>";
+}
+for ($i=1; $i < 7; $i++){ 
+    affiche_titre("mon titre ".rand(1,6),$colors[rand(1,6)],rand(1,6));
+} 
+
+// Variable avec des string int tableau indicé et associatif
+// Repété une info : boucle for foreach while
+// Conditionné avec if
+// fonction paramétré contraindre les types des paramétres 
+
+
+// Créez une fonction calculatrice prenant en paramètre
+// un tableau et l’opérateur indiquant l’opération à réaliser.
