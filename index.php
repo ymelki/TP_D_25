@@ -20,7 +20,7 @@
     <?php 
     for ($i=0;$i<$nb_ligne;$i++) { ?>
         <tr>
-            <TH> gfdgf   </TH>  
+            <TH> <?=$reference[$i] ?>   </TH>  
             <TH> dgfd  </TH>
             <TH> 23 </TH>
             <TH> 34 </TH>

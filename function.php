@@ -7,3 +7,10 @@ $nb_facture=rand(1000,5000);
 
 // date du jour
 $date=date("d-m-y"); 
+
+// Tableau en PHP de donnée d articles
+for ($i=0;$i<$nb_ligne;$i++) {
+    $reference[]="ref".$i;
+}
+
+ 
