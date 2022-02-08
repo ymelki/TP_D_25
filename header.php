@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<?php require "function.php"; ?>
     <section>
         <table width="100%">
     <tr>
@@ -17,8 +18,9 @@
         75012 PARIS
         </td>
         <td>
-            Facture : <br/>
-            Date :
+            Facture : <?= $nb_facture; ?>
+                      <br/>
+            Date :  <?= $date; ?>
         </td>
         <td>
             MON ENTREPRISE <br >
