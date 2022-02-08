@@ -1,3 +1,8 @@
 .footer{
     text-align: center;
 }
+
+#tab_total{
+    display: flex;
+    justify-content: flex-end;
+}

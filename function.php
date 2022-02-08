@@ -1,4 +1,6 @@
 <?php
+
+
 // nombre de ligne de mon tableau de facture
 $nb_ligne=rand(1,10);
 
@@ -22,4 +24,17 @@ for ($i=0;$i<$nb_ligne;$i++) {
     $prix_total_ttc[$i]= $prix[$i]*1.2;
 }
 
- 
+ $prix_total_HT=0;
+// somme d'un tableau de valeur
+for ($i=0;$i<$nb_ligne;$i++){ 
+    $prix_total_HT=$prix_total_HT+$prix_total[$i];  //  $prix_total[0]+$prix_total[1]+$prix_total[2]  
+}
+
+// Fonction qui permet de faire la somme du tableau de valeur
+$prix_total_HT_F=array_sum($prix_total);
+
+// Taxe = Prix * 0.2
+$taxe= $prix_total_HT * 0.2;
+
+// Total = taxe + Prix_total_HT
+$total= $taxe + $prix_total_HT; 

@@ -29,5 +29,23 @@
         </tr>
     <?php } ?>
 </table>
-
+<br />
+<br />
+<div id="tab_total">
+    <table>
+        <tr>
+            <th>TOTAL HT</th>
+            <th><?= $prix_total_HT_F ?> €</th>
+        </tr>
+        <tr>
+            <th>TVA 20%</th>
+            <th><?= $taxe ?> €</th>
+        </tr>
+            <th>TOTAL</th>
+            <th><?= $total ?> €</th>
+        <tr>
+            
+        </tr>
+    </table>
+</div>
 <?php include "footer.php"; ?>
