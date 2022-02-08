@@ -105,8 +105,38 @@ for ($i=1; $i < 7; $i++){
 // Variable avec des string int tableau indicé et associatif
 // Repété une info : boucle for foreach while
 // Conditionné avec if
-// fonction paramétré contraindre les types des paramétres 
+// Fonction paramétré contraindre les types des paramétres 
 
 
 // Créez une fonction calculatrice prenant en paramètre
 // un tableau et l’opérateur indiquant l’opération à réaliser.
+function calculette($tab,$operateur){
+  var_dump($tab);
+  $result=0;
+  if ($operateur=="+") {  $result=  array_sum($tab);      }
+    if ($operateur=="-") {
+        for ($i=0;$i<count($tab);$i++){ 
+            $result=$result-$tab[$i];  //  $prix_total[0]+$prix_total[1]+$prix_total[2]  
+        }
+    }
+    if ($operateur=="*") {
+        $result=1;
+        for ($i=0;$i<count($tab);$i++){ 
+            $result=$result*$tab[$i];  //  $prix_total[0]+$prix_total[1]+$prix_total[2]  
+        }
+    }
+    if ($operateur=="/") {
+        $result=1;
+        for ($i=0;$i<count($tab);$i++){ 
+            $result=$result/$tab[$i];  //  $prix_total[0]+$prix_total[1]+$prix_total[2]  
+        }
+    }
+    return $result;
+}
+$tab=[rand(1,6),rand(1,6),rand(1,6),rand(1,6)];
+
+
+echo calculette($tab,"+");
+echo calculette($tab,"-");
+echo calculette($tab,"*");
+echo calculette($tab,"/");
