@@ -48,6 +48,25 @@ $utilisateur["age"]=34;
 // var_dump($utilisateur);   afficher tout mon tableau juste technique
 // print_r($utilisateur);  afficher tout mon tableau juste technique
 // afficher tout mon tableau avec une boucle plus representative
-foreach (  $utilisateur  as $key => $value    ){
+/*foreach (  $utilisateur  as $key => $value    ){
    echo "ma clé est : ". $key. "  . ma valeur est : ".$value;
+}*/
+
+/*
+Créez une fonction
+ affichant l’âge de l’utilisateur
+  avec une couleur ... : HTML style=color:red;
+  différente sur le texte suivant l’âge de l’utilisateur.
+*/
+function affiche_age ( $age) {
+    $color="red";
+    // entre 0 et 10 ans => red
+     // entre 10 et 20 ans => grey
+     // entre 20 et 30 ans => brown
+    global $utilisateur;
+    echo "<div style=color:".$color.";>".$age."</div><br />";
 }
+affiche_age($age=34);
+affiche_age($age=24);
+affiche_age($age=14);
+affiche_age( $age=67);
