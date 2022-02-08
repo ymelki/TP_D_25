@@ -60,12 +60,28 @@ Créez une fonction
 */
 function affiche_age ( $age) {
     $color="red"; 
-     if (  $age >= 0  && $age <=10  ) {  $color="black"; }
-     if (  $age >= 10  && $age <=20  ) {  $color="red"; }
-     if (  $age >= 20  && $age <=30  ) {  $color="brown"; }
-     if (  $age >= 30  && $age <=40  ) {  $color="grey"; }
-     if (  $age >= 40  && $age <=50  ) {  $color="green"; }
-     if (  $age >= 50  && $age <=60  ) {  $color="purple"; }
+    $colors=[
+        "red",
+        "green",
+        "grey",
+        "black",
+        "purple",
+        "yellow",
+        "pink",
+        "blue",
+        "orange",
+        "brown",
+        "black",
+        "black",
+        "pink"];
+    // En code on aime pas répété on fait des boucles...
+    $agemin=0;
+    $agemax=10;
+    for ($i=0;$i<12;$i++) {
+        if (  $age >= $agemin  && $age <=$agemax  ) {  $color=$colors[$i]; }
+        $agemin=$i*10;
+        $agemax=($i*10)+10;
+    }
     global $utilisateur;
     echo "<div style=color:".$color.";>".$age."</div><br />";
 }
@@ -73,3 +89,5 @@ affiche_age($age=8);
 affiche_age($age=24);
 affiche_age($age=14);
 affiche_age($age=57);
+affiche_age($age=97);
+affiche_age($age=37);
