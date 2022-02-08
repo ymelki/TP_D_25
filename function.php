@@ -59,14 +59,17 @@ Créez une fonction
   différente sur le texte suivant l’âge de l’utilisateur.
 */
 function affiche_age ( $age) {
-    $color="red";
-    // entre 0 et 10 ans => red
-     // entre 10 et 20 ans => grey
-     // entre 20 et 30 ans => brown
+    $color="red"; 
+     if (  $age >= 0  && $age <=10  ) {  $color="black"; }
+     if (  $age >= 10  && $age <=20  ) {  $color="red"; }
+     if (  $age >= 20  && $age <=30  ) {  $color="brown"; }
+     if (  $age >= 30  && $age <=40  ) {  $color="grey"; }
+     if (  $age >= 40  && $age <=50  ) {  $color="green"; }
+     if (  $age >= 50  && $age <=60  ) {  $color="purple"; }
     global $utilisateur;
     echo "<div style=color:".$color.";>".$age."</div><br />";
 }
-affiche_age($age=34);
+affiche_age($age=8);
 affiche_age($age=24);
 affiche_age($age=14);
-affiche_age( $age=67);
+affiche_age($age=57);
