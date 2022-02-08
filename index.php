@@ -21,11 +21,11 @@
     for ($i=0;$i<$nb_ligne;$i++) { ?>
         <tr>
             <TH> <?=$reference[$i] ?>   </TH>  
-            <TH> dgfd  </TH>
-            <TH> 23 </TH>
-            <TH> 34 </TH>
-            <TH> 34</TH>
-            <TH> 345</TH>
+            <TH> <?=$designation[$i] ?>  </TH>
+            <TH> <?=$prix[$i] ?> </TH>
+            <TH> <?=$quantite[$i] ?> </TH>
+            <TH> <?=$prix_total[$i] ?> €</TH>
+            <TH> <?=$prix_total_ttc[$i] ?> €</TH>
         </tr>
     <?php } ?>
 </table>
