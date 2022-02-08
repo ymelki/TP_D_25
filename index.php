@@ -1,4 +1,5 @@
 <?php include "header.php"; ?>
+<?php require "function.php"; ?>
 
 <br />
 <br />
@@ -17,7 +18,7 @@
     </tr>
 
     <?php 
-    for ($i=0;$i<10;$i++) { ?>
+    for ($i=0;$i<$nb_ligne;$i++) { ?>
         <tr>
             <TH> gfdgf   </TH>  
             <TH> dgfd  </TH>
