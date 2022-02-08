@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>TP_D_25 : ...</title>
 </head>
 
@@ -28,7 +29,7 @@
             75012 PARIS
         </td>
         <td>
-            IMPRIMER CETTE PAGE
+           <input type="button" value="IMPRIMER CETTE PAGE" onclick="imprimer()"> 
         </td>
     </tr>
 </table>
