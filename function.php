@@ -85,9 +85,6 @@ function affiche_age ( $age) {
     global $utilisateur;
     echo "<div style=color:".$color.";>".$age."</div><br />";
 }
-affiche_age($age=8);
-affiche_age($age=24);
-affiche_age($age=14);
-affiche_age($age=57);
-affiche_age($age=97);
-affiche_age($age=37);
+for ($i=1; $i < 13; $i++){
+    affiche_age($age=$i*10);
+}
