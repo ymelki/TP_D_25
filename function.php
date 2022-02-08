@@ -38,3 +38,16 @@ $taxe= $prix_total_HT * 0.2;
 
 // Total = taxe + Prix_total_HT
 $total= $taxe + $prix_total_HT; 
+
+// Tableau associatif / indicé PHP utilisateur affichant le nom le prenom son mail et son âge...
+$utilisateur["nom"]="Melki";
+$utilisateur["prenom"]="Yoel";
+$utilisateur["age"]=34;
+
+//echo $utilisateur["nom"];  afficher une case du tableau
+// var_dump($utilisateur);   afficher tout mon tableau juste technique
+// print_r($utilisateur);  afficher tout mon tableau juste technique
+// afficher tout mon tableau avec une boucle plus representative
+foreach (  $utilisateur  as $key => $value    ){
+   echo "ma clé est : ". $key. "  . ma valeur est : ".$value;
+}
